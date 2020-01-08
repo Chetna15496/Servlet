@@ -18,13 +18,14 @@ public class CubeServlet extends HttpServlet{
     	 int num1=Integer.parseInt(req.getParameter("t1"));
     	 int num2=Integer.parseInt(req.getParameter("t2"));
     	 int sum= num1+num2;
-    	 //int cube=sum*sum*sum;
-    	 res.getWriter().println("Sum=  "+sum);
-    	// res.getWriter().println("Cube=  "+cube);
+    	 //int cube=sum*sum*sum;//1
+    	// res.getWriter().println("Sum=  "+sum);//2
+    	// res.getWriter().println("Cube=  "+cube);//1
     	
-    	 RequestDispatcher rd= req.getRequestDispatcher("Cubes");//cube is the path
-    	 req.setAttribute("sum",sum);
-    	 rd.forward(req,res);
+    	// RequestDispatcher rd= req.getRequestDispatcher("Cubes");//cube is the path//2
+    	 res.sendRedirect("Cubes?sum="+sum);
+    	// req.setAttribute("sum",sum);//2
+    	 //rd.forward(req,res);//2
     	 
     	
     	
