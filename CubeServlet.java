@@ -23,7 +23,7 @@ public class CubeServlet extends HttpServlet{
     	// res.getWriter().println("Cube=  "+cube);//1
     	
     	// RequestDispatcher rd= req.getRequestDispatcher("Cubes");//cube is the path//2
-    	 res.sendRedirect("Cubes?sum="+sum);
+    	 res.sendRedirect("Cubes?sum="+sum);//3//sendRedirect method used.
     	// req.setAttribute("sum",sum);//2
     	 //rd.forward(req,res);//2
     	 
